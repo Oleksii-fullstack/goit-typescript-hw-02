@@ -1,6 +1,10 @@
 import s from "./Section.module.css";
 
-const Section = ({ children }) => {
+type SectionProps = {
+  children: React.ReactNode;
+};
+
+const Section = ({ children }: SectionProps) => {
   return <section className={s.section}>{children}</section>;
 };
 
