@@ -1,7 +1,8 @@
 import { PacmanLoader } from "react-spinners";
 import s from "./Loader.module.css";
+import { JSX } from "react";
 
-const Loader = () => {
+const Loader = (): JSX.Element => {
   return (
     <div className={s.backdrop}>
       <PacmanLoader color="#eec532" size={35} speedMultiplier={1} />

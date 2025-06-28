@@ -1,7 +1,12 @@
 import { FiChevronsDown } from "react-icons/fi";
 import s from "./LoadMoreBtn.module.css";
+import { JSX } from "react";
 
-const LoadMoreBtn = ({ onClick }) => {
+interface LoadMoreBtnProps {
+  onClick: () => void;
+}
+
+const LoadMoreBtn = ({ onClick }: LoadMoreBtnProps): JSX.Element => {
   return (
     <div className={s.wrapper}>
       <button className={s.button} type="button" onClick={onClick}>

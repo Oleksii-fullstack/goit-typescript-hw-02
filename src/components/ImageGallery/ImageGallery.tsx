@@ -1,8 +1,17 @@
 import Grid from "../Grid/Grid";
 import GridItem from "../GridItem/GridItem";
 import ImageCard from "../ImageCard/ImageCard";
+import { ImageItem, ModalImage } from "../../types";
 
-const ImageGallery = ({ galleryList, openModal }) => {
+interface ImageGalleryProps {
+  galleryList: ImageItem[];
+  openModal: (data: ModalImage) => void;
+}
+
+const ImageGallery: React.FC<ImageGalleryProps> = ({
+  galleryList,
+  openModal,
+}) => {
   return (
     <Grid>
       {galleryList.map(

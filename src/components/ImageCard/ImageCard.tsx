@@ -1,6 +1,21 @@
+import { ModalImage } from "../../types";
 import s from "./ImageCard.module.css";
 
-const ImageCard = ({ color, src, srcLarge, alt, openModal }) => {
+interface ImageCardProps {
+  color: string;
+  src: string;
+  srcLarge: string;
+  alt: string;
+  openModal: (data: ModalImage) => void;
+}
+
+const ImageCard: React.FC<ImageCardProps> = ({
+  color,
+  src,
+  srcLarge,
+  alt,
+  openModal,
+}) => {
   return (
     <div
       className={s.card}

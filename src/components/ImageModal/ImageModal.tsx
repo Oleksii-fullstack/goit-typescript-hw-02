@@ -1,11 +1,12 @@
-import Modal from "react-modal";
+import { JSX } from "react";
+import Modal, { Styles } from "react-modal";
 
-const customStyles = {
+const customStyles: Styles = {
   overlay: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    zIndex: "999999",
+    zIndex: 999999,
     backgroundColor: "rgba(45, 45, 45, 0.3)",
     backdropFilter: "blur(5px)",
   },
@@ -27,7 +28,19 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-const ImageModal = ({ modalIsOpen, closeModal, src, alt }) => {
+interface ImageModalProps {
+  modalIsOpen: boolean;
+  closeModal: () => void;
+  src: string;
+  alt: string;
+}
+
+const ImageModal = ({
+  modalIsOpen,
+  closeModal,
+  src,
+  alt,
+}: ImageModalProps): JSX.Element => {
   return (
     <Modal
       isOpen={modalIsOpen}
